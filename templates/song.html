@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ song[1] }}</title>
+<style>
+body{
+margin:0;
+background:black;
+color:white;
+font-family:Orbitron;
+text-align:center;
+padding:50px;
+}
+
+.player{
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:20px;
+border:1px solid #00f7ff;
+box-shadow:0 0 30px #00f7ff;
+}
+
+audio{
+width:100%;
+margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="player">
+<h1>{{ song[1] }}</h1>
+<p>{{ song[2] }}</p>
+
+<audio controls>
+<source src="/uploads/{{ song[3] }}">
+</audio>
+
+<p>{{ song[4] }}</p>
+</div>
+
+</body>
+</html>

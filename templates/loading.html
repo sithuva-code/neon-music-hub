@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loading...</title>
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:black;
+overflow:hidden;
+}
+
+.loader{
+width:150px;
+height:150px;
+border-radius:50%;
+border:5px solid transparent;
+border-top:5px solid #00f2ff;
+border-right:5px solid #ff00ff;
+animation:spin 1.5s linear infinite;
+box-shadow:0 0 40px #00f2ff;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+</style>
+
+<script>
+setTimeout(()=>{
+window.location.href="/dashboard"
+},2500)
+</script>
+
+</head>
+<body>
+<div class="loader"></div>
+</body>
+</html>

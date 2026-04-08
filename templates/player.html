@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="player-box">
+    <h2>{{ song[1] }}</h2>
+    <p>🎤 {{ song[2] }}</p>
+
+    <audio controls>
+        <source src="/uploads/{{ song[3] }}" type="audio/mpeg">
+    </audio>
+
+    <div class="lyrics">
+        <h3>📜 Lyrics</h3>
+        <p>{{ song[4] }}</p>
+    </div>
+
+    <a href="/download/{{ song[3] }}" class="btn">⬇ Download</a>
+</div>
+
+{% endblock %}

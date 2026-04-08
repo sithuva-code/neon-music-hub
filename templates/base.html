@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NEXT ERA MUSIC HUB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <h1 class="logo">NEXT ERA <span>MUSIC HUB</span></h1>
+    <div>
+        <a href="/">Home</a>
+        {% if session.get('user') %}
+            <a href="/upload">Upload</a>
+            <a href="/logout">Logout ({{ session.get('user') }})</a>
+        {% else %}
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="ad-banner">
+    🚀 Advertisement Space (Google AdSense Ready)
+</div>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

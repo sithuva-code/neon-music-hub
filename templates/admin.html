@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<style>
+body{
+margin:0;
+background:#000;
+color:#00f7ff;
+font-family:Orbitron;
+}
+
+.sidebar{
+width:200px;
+height:100vh;
+background:#111;
+position:fixed;
+padding:20px;
+border-right:1px solid #00f7ff;
+}
+
+.content{
+margin-left:220px;
+padding:40px;
+}
+
+.card{
+background:#111;
+padding:20px;
+margin:20px 0;
+border:1px solid #00f7ff;
+border-radius:15px;
+box-shadow:0 0 15px #00f7ff;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+<h2>⚡ ADMIN</h2>
+<p>Dashboard</p>
+<p>Users</p>
+<p>Songs</p>
+</div>
+
+<div class="content">
+<h1>System Overview</h1>
+
+<div class="card">
+Total Users: {{ users }}
+</div>
+
+<div class="card">
+Total Songs: {{ songs }}
+</div>
+
+</div>
+
+</body>
+</html>

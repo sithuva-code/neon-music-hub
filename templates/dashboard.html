@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="section-title">🔥 Latest Songs</h2>
+
+<div class="song-grid">
+    {% for song in songs %}
+    <div class="song-card">
+        <h3>{{ song[1] }}</h3>
+        <p>🎤 {{ song[2] }}</p>
+        <p>👁 {{ song[5] }} views</p>
+        <a href="/song/{{ song[0] }}" class="btn">Play</a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
